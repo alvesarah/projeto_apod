@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="16x16" href="./imagens/planetas.png">
+        <link rel="stylesheet" href="./style.css">
+        <title>APOD</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="hamburguer">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+                <span>fechar</span>
+            </div>
+            <header id="home">
+                <div class="img-background">
+                    <!-- <img src="./imagens/background_temporario.jpg" alt="Foto do espaço hoje"> -->
+                </div>
+                <div class="titulo">
+                    <h1>Astronomy Picture of the Day</h1> <!-- titulo da página ta certo  -->
+                    <p class="titulo-ajax"></p> <!-- titulo da url ajax  -->
+                    <a href="#imagem-dia-desc">Ver mais</a>
+                </div>
+            </header>
+            <aside class="sidebar">
+                <nav>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#home" class="menu-link">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#sobre" class="menu-link">Sobre</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#imagem-dia" class="menu-link">Imagem do dia</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#filtrar-por-data" class="menu-link">Filtrar Por Data</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#calendario" class="menu-link">Calendario</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social-media">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100009381085277"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/sarahalvesoliveira/"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/sashamoon"><i class="fab fa-github"></i></a>
+                </div>
+            </aside>
+
+            <main>
+                <section id="sobre" class="sobre">
+                    <h1 class="subtitulo">Sobre</h1>
+                    <p>Descubra o cosmos! A cada dia, uma imagem ou fotografia diferente do nosso fascinante universo é apresentada, juntamente com uma breve explicação escrita por um astrônomo profissional.</p>
+                    <img src="./imagens/gif-universo.gif" width="480" height="480"><p><a href="https://giphy.com/gifs/65Tr7aW4HJYdCHN082" target="_blank">via GIPHY</a></p>
+                </section>
+                <section id="imagem-dia">
+                    <h1 class="subtitulo">Imagem do Dia</h1>
+                    <div id="imagem-dia-desc" class="img-dia"></div><!-- Imagem do dia -->
+                </section>
+                <section id="filtrar-por-data" class="sessao-filtrar">
+                    <h1 class="subtitulo">Filtrar por data</h1>
+                    <div>
+                        <input type="date" id="data" class="data">
+                        <button>Buscar</button>
+                    </div>
+                </section>
+                <section id="calendario">
+                    <h1 class="subtitulo">Calendário</h1>
+                </section>
+            </main>
+            <footer>
+                <a href="#home" id="link-topo">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

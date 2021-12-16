@@ -17,13 +17,11 @@
                 <span>fechar</span>
             </div>
             <header id="home">
-                <div class="img-background">
-                    <!-- <img src="./imagens/background_temporario.jpg" alt="Foto do espaço hoje"> -->
-                </div>
+                <div class="img-background"></div> <!--Imagem do céu atual como header(background)-->
                 <div class="titulo">
                     <h1>Astronomy Picture of the Day</h1> <!-- titulo da página ta certo  -->
-                    <p class="titulo-ajax"></p> <!-- titulo da url ajax  -->
-                    <a href="#imagem-dia-desc">Ver mais</a>
+                    <p>Descubra o cosmos! A cada dia, uma imagem ou fotografia diferente do nosso fascinante universo é apresentada, juntamente com uma breve explicação escrita por um astrônomo profissional.</p> <!-- titulo da url ajax  -->
+                    <a href="#imagem-dia">Ver mais</a>
                 </div>
             </header>
             <aside class="sidebar">
@@ -33,16 +31,10 @@
                             <a href="#home" class="menu-link">Home</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#sobre" class="menu-link">Sobre</a>
-                        </li>
-                        <li class="menu-item">
                             <a href="#imagem-dia" class="menu-link">Imagem do dia</a>
                         </li>
                         <li class="menu-item">
                             <a href="#filtrar-por-data" class="menu-link">Filtrar Por Data</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#calendario" class="menu-link">Calendario</a>
                         </li>
                     </ul>
                 </nav>
@@ -54,33 +46,49 @@
             </aside>
 
             <main>
-                <section id="sobre" class="sobre">
-                    <h1 class="subtitulo">Sobre</h1>
-                    <p>Descubra o cosmos! A cada dia, uma imagem ou fotografia diferente do nosso fascinante universo é apresentada, juntamente com uma breve explicação escrita por um astrônomo profissional.</p>
-                    <img src="./imagens/gif-universo.gif" width="480" height="480"><p><a href="https://giphy.com/gifs/65Tr7aW4HJYdCHN082" target="_blank">via GIPHY</a></p>
-                </section>
-                <section id="imagem-dia">
-                    <h1 class="subtitulo">Imagem do Dia</h1>
-                    <div id="imagem-dia-desc" class="img-dia"></div><!-- Imagem do dia -->
-                </section>
-                <section id="filtrar-por-data" class="sessao-filtrar">
-                    <h1 class="subtitulo">Filtrar por data</h1>
-                    <div>
-                        <input type="date" id="data" class="data">
-                        <button>Buscar</button>
+                <section id="imagem-dia" class="imagem-dia">
+                    <div class="imagem-dia_descricao">
+                        <h2 class="titulo-ajax"></h2>
+                        <p class="data-ajax"></p>
+                        <div id="imagem-dia-desc" class="img-dia"></div><!-- Imagem do dia -->
+                        <p class="descricao-ajax"></p><!-- Descrição imagem do dia -->
                     </div>
                 </section>
-                <section id="calendario">
-                    <h1 class="subtitulo">Calendário</h1>
+                <section class="imagem-dia">
+                    <div class="filtra_descricao">
+                        <h2 class="titulo-ajax-pesquisa"></h2>
+                        <div class="result-pesquisa">
+                            <p class="data-ajax-pesquisa"></p>
+                            <div id="imagem-dia-desc" class="img-dia-pesquisa"></div><!-- Imagem do dia -->
+                            <p class="descricao-ajax-pesquisa"></p><!-- Descrição imagem do dia -->
+                        </div>
+                        <p>Filtre com a data desejada para ver uma incrivel foto do céu.</p>
+                        <input type="date" id="data" class="data">
+                        <button id="filtrar-por-data" class="btn-pesquisa">Buscar</button>
+                    </div>
                 </section>
             </main>
+
             <footer>
-                <a href="#home" id="link-topo">
-                    <i class="fas fa-arrow-up"></i>
-                </a>
+                <div class="footer-content">
+                    <p>
+                        copyriright &copy; 2021, ETECIA DS - Todos os direitos reservados
+                    </p>
+                    <div class="social-list">
+                        <ul>
+                            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </footer>
+            <a href="#home" id="link-topo">
+                <i class="fas fa-arrow-up"></i>
+            </a>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
         <script src="./script.js"></script>
     </body>
 </html>

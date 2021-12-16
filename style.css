@@ -267,13 +267,6 @@ header, .sobre{
     box-shadow: 0 0 .4rem .6rem #00000009;
 }
 
-/* main{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
-
-
 /* SECTION */
 section{
     text-align: center;
@@ -285,32 +278,19 @@ section{
     padding-top: 2rem;
 }
 
-/* SEÇÃO SOBRE */
-.sobre-background{
-    background-color: rgb(0, 0, 0);
-}
-
-.sobre h1{
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-    margin-bottom: 15%;
-}
-
-.sobre_descricao p{
-    margin: 0 10%;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color:rgb(255, 255, 255);
-}
-
 /* SEÇÃO IMAGEM DO DIA */
-.imagem-dia, .sobre{
+.imagem-dia{
+    padding: 2rem 0;
     background: url(./imagens/testequatro.gif);
 }
 
+.imagem-descricao{
+    display: flex;
+}
+
 .imagem-dia_descricao, .filtra_descricao {
-    margin-left: 25%;
-    width: 50%;
+    margin-left: 15%;
+    width: 70%;
     height: auto;
     background-color:rgba(255, 255, 255, 0.253);
 }
@@ -322,6 +302,7 @@ section{
 }
 
 .img-hoje{
+    padding-left: 1rem;
     width:400px; /* you can use % */
     height: auto;
     object-fit: cover;
@@ -380,9 +361,8 @@ section{
 /* FOOTER */
 footer{
     width: 100%;
-    height: 2rem;
     padding: 2rem 0;
-    background-color: rgba(38, 3, 71, 0.164);
+    background-color: rgba(255, 255, 255, 0.164);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,4 +388,75 @@ footer{
     padding: 0 2rem;
     color: black;
     font-size: 1.3rem;
+}
+
+@media (max-width: 700px){
+    *{
+        overflow-x: hidden;
+    }
+
+    /* HAMBURGUER */
+    .hamburguer{
+        transition: all 2s;
+    }
+    
+    .show-menu .hamburguer{
+        right: 80%;
+    }
+
+    .hamburguer span{
+        visibility: hidden;    
+    }
+    
+    /* SIDEBAR */
+    .sidebar{
+        width: 100%;
+        right: 0;
+        top: -60rem;
+        transition: all 2s;
+    }
+    
+    .show-menu .sidebar{
+        top: 0rem;
+    }
+    
+    /* HEADER */
+    .titulo{
+        top: 10%;
+        left: 0;
+        margin-left: 1rem;
+    }
+
+    div .titulo{
+        height: 100%;
+    }
+
+    /* MAIN */
+    .imagem-dia{
+        padding: 0;
+    }
+
+    .imagem-dia_descricao, .filtra_descricao {
+        margin-left: 0;
+        width: auto;    
+    }
+
+    .imagem-descricao{
+        flex-direction: column;
+    }
+
+    .img-hoje {
+        width: 300px;
+    }
+
+    /* footer */
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer ul{
+        margin-top: 1rem;
+    }
+    
 }
